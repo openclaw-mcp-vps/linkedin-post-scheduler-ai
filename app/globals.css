@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d1117;
+  --surface-1: #111827;
+  --surface-2: #0f172a;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --border: #1f2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 12% 18%, #1f2937 0, #0d1117 35%),
+    radial-gradient(circle at 88% 4%, #0f3a5f 0, rgba(15, 58, 95, 0) 32%),
+    #0d1117;
+  color: var(--text-primary);
+  font-family: var(--font-body), "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), "Space Grotesk", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.react-calendar {
+  width: 100%;
+  background-color: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 0.75rem;
+  color: #e2e8f0;
+  font-family: var(--font-body), "IBM Plex Sans", sans-serif;
+  padding: 0.75rem;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.react-calendar__navigation button {
+  color: #cbd5e1;
+  background: transparent;
+  min-width: 2.75rem;
+  border-radius: 0.5rem;
+}
+
+.react-calendar__navigation button:hover,
+.react-calendar__navigation button:focus {
+  background: #1e293b;
+}
+
+.react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+.react-calendar__tile {
+  background: transparent;
+  color: #e2e8f0;
+  border-radius: 0.5rem;
+  height: 3.2rem;
+}
+
+.react-calendar__tile:hover,
+.react-calendar__tile:focus {
+  background: #1e293b;
+}
+
+.react-calendar__tile--active {
+  background: #0ea5e9;
+  color: #082f49;
+}
+
+.react-calendar__tile--now {
+  background: #1d4ed8;
+  color: #dbeafe;
+}
